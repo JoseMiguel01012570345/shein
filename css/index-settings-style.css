@@ -1,0 +1,39 @@
+body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0px;
+    margin: 0px;
+}
+
+.precio-comprador-table {
+    display: grid;
+    height: 70%;
+    overflow: auto;
+}
+
+.precio-comprador-table::-webkit-scrollbar {
+    display: none;
+}
+
+.rowStart {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+}
+
+.from {
+    border: 1px solid black;
+    border-radius: 10px 0px 0px 0px;
+}
+
+.to {
+    border: 1px solid black;
+}
+
+.sum {
+    border: 1px solid black;
+    border-radius: 0px 10px 0px 0px;
+
+}
