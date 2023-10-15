@@ -1,0 +1,261 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(165, 42, 42, 0.582);
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*------------------------------------------------------------------------------------------*/
+
+
+.container-task {
+    box-shadow: 0px 0px 2px 5px burlywood;
+    background-color: rgb(231, 169, 87);
+    width: 30%;
+    height: 80%;
+    border-radius: 10px;
+}
+
+.title {
+    background-color: beige;
+    border-radius: 10px 10px 0px 0px;
+    height: 10%;
+}
+
+.title h3 {
+    text-align: center;
+    border-radius: 10px;
+    margin: 0px;
+    padding-top: 5px;
+}
+
+@media (min-width:100px) and (max-width:200px) {
+    .title h3 {
+        font-size: 5px;
+    }
+}
+
+@media (min-width:200px) and (max-width:300px) {
+    .title h3 {
+        font-size: 5px;
+    }
+}
+
+@media (min-width:300px) and (max-width:400px) {
+    .title h3 {
+        font-size: 6px;
+    }
+}
+
+@media (min-width:400px) and (max-width:500px) {
+    .title h3 {
+        font-size: 8px;
+    }
+}
+
+@media (min-width:500px) and (max-width:600px) {
+    .title h3 {
+        font-size: 10px;
+    }
+}
+
+.task-list {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    overflow-Y: auto;
+    background-color: beige;
+    justify-content: center;
+    height: 82%;
+}
+
+.task-list::-webkit-scrollbar {
+    display: none;
+}
+
+input[type="checkbox"]:hover {
+    cursor: pointer;
+}
+
+input[type="text"]:focus {
+    border: 1px solid rgba(33, 61, 85, 0);
+    box-shadow: 0px 0px 3px 3px rgba(81, 107, 131, 0.493);
+}
+
+input[type="text"] {
+    pointer-events: auto;
+    border: 1px solid rgba(33, 61, 85, 0);
+    background-color: rgba(194, 195, 196, 0.493);
+    box-shadow: 0px 0px 3px 3px rgba(81, 107, 131, 0.493);
+    text-align: center;
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(80, 82, 83);
+
+}
+
+.intro-task {
+    margin: 20px;
+    border-radius: 5px;
+    width: 100%;
+    height: 20px;
+}
+
+.task {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* padding-left: 15px;
+    padding-right: 15px; */
+    align-items: center;
+}
+
+.task p {
+    transition: scale 0.5s ease;
+}
+
+.task p:hover {
+    cursor: pointer;
+    scale: 1.1;
+}
+
+/*------------------------------------------------------------------------------------------*/
+.buttons {
+    height: 8%;
+    display: flex;
+    background-color: beige;
+    justify-content: center;
+    align-items: end;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.insert,
+.update,
+.delete,
+.completed,
+.settings {
+    width: 30px;
+    height: 30px;
+    margin: 2%;
+    border-radius: 10px;
+    border: 1px solid aliceblue;
+    box-shadow: 0px 0px 2px 2px rgb(177, 181, 184);
+    color: rgba(165, 42, 42, 0.61);
+    transition: scale .2s linear;
+}
+
+/* @media (min-width:) and (max-width:) {} */
+
+@media (min-width:100px) and (max-width:300px) {
+
+    .insert,
+    .update,
+    .delete,
+    .completed,
+    .settings {
+        width: 5px;
+        height: 5px;
+    }
+}
+
+@media (min-width:300px) and (max-width:400px) {
+
+    .insert,
+    .update,
+    .delete,
+    .completed,
+    .settings {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (min-width:400px) and (max-width:600px) {
+
+    .insert,
+    .update,
+    .delete,
+    .completed,
+    .settings {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media (min-width:1300px) and (max-width:1800px) {
+
+    .insert,
+    .update,
+    .delete,
+    .completed,
+    .settings {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (min-width:1800px) {
+
+    .insert,
+    .update,
+    .delete,
+    .completed,
+    .settings {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@keyframes rotate {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(360deg);
+    }
+}
+
+.insert:hover,
+.update:hover,
+.delete:hover,
+.completed:hover,
+.settings:hover {
+    cursor: pointer;
+    scale: 1.5;
+    animation: rotate 0.3s ease-in-out;
+}
+
+/*                                        WORKSPACE                                         */
+/*------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
+
+.my-settings {
+    /* display: none; */
+    position: relative;
+    top: -50%;
+    display: grid;
+}
+
+.precio-comprador,
+.mi-precio {
+    margin: 10px;
+    font-size: x-large;
+    border-radius: 30px;
+    border: 1px solid gray;
+    box-shadow: 0px 0px 8px 3px gray;
+}
