@@ -16,7 +16,30 @@ function update() {
     row = document.querySelectorAll(".row");
     updateValue();
     deleting();
+    scale();
 }
+function scale() {
+
+    row.forEach(element => {
+
+        element.addEventListener("mouseover", () => {
+
+            row.forEach(item => {
+                if (item != element)
+                    item.style.setProperty("filter", "blur(5px)");
+            })
+
+        })
+        element.addEventListener("mouseout", () => {
+
+            row.forEach(item => {
+                if (item != element)
+                    item.style.setProperty("filter", "none");
+            })
+        })
+    })
+}
+scale()
 //-------------------------------------------------------------------
 
 //--------------------INSERT-----------------------------------------
@@ -80,11 +103,10 @@ function updateValue() {
 
         if (Number(value)) {
 
-            let num = String(event.target.className).split(" ")[1].substring("hfrom".length);
+            let num = String(event.target.className).split(" ")[1].substring("from".length);
 
             document.querySelector(`.hfrom${num}`).innerHTML = value;
         }
-
         else
             alert("Write a number");
     }))
@@ -95,7 +117,7 @@ function updateValue() {
 
         if (Number(value)) {
 
-            let num = String(event.target.className).split(" ")[1].substring("hto".length);
+            let num = String(event.target.className).split(" ")[1].substring("to".length);
 
             document.querySelector(`.hto${num}`).innerHTML = value;
         }
@@ -110,8 +132,8 @@ function updateValue() {
 
         if (Number(value)) {
 
-            let num = String(event.target.className).split(" ")[1].substring("hsum".length);
-
+            let num = String(event.target.className).split(" ")[1].substring("sum".length);
+            console.log(event.target.className);
             document.querySelector(`.hsum${num}`).innerHTML = value;
         }
 
