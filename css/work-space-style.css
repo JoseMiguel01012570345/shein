@@ -12,19 +12,42 @@ body {
 
 /*------------------------------------------------------------------------------------------*/
 
-
 .container-task {
     box-shadow: 0px 0px 2px 5px burlywood;
     background-color: rgb(231, 169, 87);
-    width: 30%;
+    width: 80%;
     height: 80%;
     border-radius: 10px;
+    margin: 0px;
 }
 
 .title {
     background-color: beige;
     border-radius: 10px 10px 0px 0px;
     height: 10%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 20%;
+
+}
+
+.option-btn {
+    border-radius: 10px;
+    border: 0px;
+    background-color: beige;
+}
+
+.option-btn:hover {
+    cursor: pointer;
 }
 
 .title h3 {
@@ -70,7 +93,8 @@ body {
     overflow-Y: auto;
     background-color: beige;
     justify-content: center;
-    height: 82%;
+    height: 90%;
+    border-radius: 0px 0px 10px 10px;
 }
 
 .task-list::-webkit-scrollbar {
