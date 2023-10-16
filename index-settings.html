@@ -16,8 +16,10 @@
             Precio-Comprador .
         </h1>
     </div>
-    <div class="super-container" style="display: flex;justify-content: center;">
-        <div class="precio-comprador-table">
+
+
+    <div class="container-header">
+        <div class="header">
 
             <div class="rowStart">
                 <div class="from-start">
@@ -29,13 +31,40 @@
                 <div class="sum-start">
                     <h3>Suma</h3>
                 </div>
+
+                <button class="insert insert-btn">
+                    <img src="img/icons8-plus-96.png" alt="">
+                </button>
             </div>
+
         </div>
     </div>
-    <div class="insert">
-        <button class="insert-btn">
-            <img src="img/icons8-plus-96.png" alt="">
-        </button>
+
+    <div class="container-precio-comprador-table" style="display: flex;justify-content: center;">
+        <div class="precio-comprador-table">
+
+            <div class="row row1" style=" display: grid;grid-template-columns: repeat(4, 1fr);text-align: center; ">
+
+                <div class="from from1"
+                    style="border: 1px solid black;display:flex; justify-content:center; align-items:center;">
+                    <h3 class="hfrom hfrom1">-</h3>
+                </div>
+
+                <div class="to to${num}"
+                    style="border: 1px solid black;display:flex; justify-content:center; align-items:center;">
+                    <h3 class="hto hto1">-</h3>
+                </div>
+
+                <div class="sum sum${num}"
+                    style="border: 1px solid black;display:flex; justify-content:center; align-items:center;">
+                    <h3 class="hsum hsum1">-</h3>
+                </div>
+                <button class="trash-btn trash-btn1">
+                    <img src="img/icons8-trash-128.png" alt="">
+                </button>
+            </div>`;
+
+        </div>
     </div>
 
     <script src="js/my-prices.js"></script>

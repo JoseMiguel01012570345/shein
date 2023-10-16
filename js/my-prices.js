@@ -24,18 +24,18 @@ function update() {
 const insertRow = (num) => {
 
     let row = `
-    <div class="row row${num}" style=" display: grid;grid-template-columns: repeat(4, 1fr);text-align: center;">
+    <div class="row row${num}" style=" display: grid;grid-template-columns: repeat(4, 1fr);text-align: center; ">
 
-                <div class="from from${num}" style="border: 1px solid black;">
-                    <h3 class="hfrom hfrom${num}" >5</h3>
+                <div class="from from${num}" style="border: 1px solid black;display:flex; justify-content:center; align-items:center;">
+                    <h3 class="hfrom hfrom${num}" >-</h3>
                 </div>
 
-                <div class="to to${num}" style="border: 1px solid black;">
-                    <h3 class="hto hto${num}" >5</h3>
+                <div class="to to${num}" style="border: 1px solid black;display:flex; justify-content:center; align-items:center;">
+                    <h3 class="hto hto${num}" >-</h3>
                 </div>
 
-                <div class="sum sum${num}" style="border: 1px solid black;">
-                    <h3 class="hsum hsum${num}">5</h3>
+                <div class="sum sum${num}" style="border: 1px solid black;display:flex; justify-content:center; align-items:center;">
+                    <h3 class="hsum hsum${num}">-</h3>
                 </div>
                 <button class="trash-btn trash-btn${num}">
                     <img src="img/icons8-trash-128.png" alt="">
@@ -134,19 +134,7 @@ function removeRow(num) {
         if (element != deleteRow)
             table.push(element);
     }
-
-    precioCompradorTable.innerHTML = `
-        <div class="rowStart">
-        <div class="from-start">
-            <h3>Desde</h3>
-        </div>
-        <div class="to-start">
-            <h3>Hasta</h3>
-        </div>
-        <div class="sum-start">
-            <h3>Suma</h3>
-        </div>
-        </div>`;
+    precioCompradorTable.innerHTML = "";
 
     table.forEach(element => {
 
