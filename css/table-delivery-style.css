@@ -1,0 +1,79 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.super-container {
+    width: 90%;
+    height: 90%;
+    padding: 2%;
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+}
+
+.date-name {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+    height: 7%;
+}
+
+.date {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.date input {
+    width: 90%;
+    height: 100%;
+    border-radius: 0px 30px 30px 0px;
+    border-top: 1px solid rgb(194, 202, 209);
+    border-bottom: 1px solid rgb(194, 202, 209);
+    border-left: 0px solid rgb(194, 202, 209);
+    border-right: 1px solid rgb(194, 202, 209);
+}
+
+.name {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+}
+
+h4,
+h4 {
+    border-top: 1px solid rgb(194, 202, 209);
+    border-bottom: 1px solid rgb(194, 202, 209);
+    border-left: 1px solid rgb(194, 202, 209);
+    border-right: 0px solid rgb(194, 202, 209);
+    border-radius: 30px 0px 0px 30px;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    padding-left: 2%;
+}
+
+.name input {
+    width: 90%;
+    height: 100%;
+    border-radius: 0px 30px 30px 0px;
+    border-top: 1px solid rgb(194, 202, 209);
+    border-bottom: 1px solid rgb(194, 202, 209);
+    border-left: 0px solid rgb(194, 202, 209);
+    border-right: 1px solid rgb(194, 202, 209);
+}
+
+input[type="text"]::placeholder {
+    padding: 5%;
+}
