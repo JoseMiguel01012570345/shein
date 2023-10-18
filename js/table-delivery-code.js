@@ -1,22 +1,25 @@
 let nameInput = document.querySelector(".nameInput");
 let dateInput = document.querySelector(".dateInput");
+let dateh4 = document.querySelector(".date h4");
+let nameh4 = document.querySelector(".name h4");
 
 // Set the caret position after the starting writing place
-function setCaretPosition(ctrl, pos) {
-    // Modern browsers
-    if (ctrl.setSelectionRange) {
-        ctrl.focus();
-        ctrl.setSelectionRange(pos, pos);
+function setWidthOfNameh4_dateh4() {
 
-        // IE8 and below
-    } else if (ctrl.createTextRange) {
-        var range = ctrl.createTextRange();
-        range.collapse(true);
-        range.moveEnd('character', pos);
-        range.moveStart('character', pos);
-        range.select();
-    }
+    let nameInput_width = window.getComputedStyle(nameInput).getPropertyValue("height");
+    let dateInput_width = window.getComputedStyle(dateInput).getPropertyValue("height");
+
+    nameh4.style.setProperty("height", `${nameInput_width}`);
+    dateh4.style.setProperty("height", `${dateInput_width}`);
+
 }
 
 // Set the cursor position of the "#test-input" element to the end when the page loads
-setCaretPosition(nameInput, 10);
+setWidthOfNameh4_dateh4();
+
+
+window.addEventListener("resize", function () {
+
+    setWidthOfNameh4_dateh4();
+    console.log("Page size changed");
+});
