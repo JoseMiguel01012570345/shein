@@ -36,7 +36,7 @@ body {
     display: flex;
     justify-content: center;
     position: relative;
-    left: 20%;
+    left: 30%;
 
 }
 
@@ -136,8 +136,6 @@ a {
     width: 100%;
     display: flex;
     justify-content: center;
-    /* padding-left: 15px;
-    padding-right: 15px; */
     align-items: center;
 }
 
@@ -151,13 +149,50 @@ a {
 }
 
 /*------------------------------------------------------------------------------------------*/
-.buttons {
-    height: 8%;
+.buttoms {
     display: flex;
-    background-color: beige;
-    justify-content: center;
+    flex-direction: column;
+    display: none;
+    position: absolute;
+    top: 22px;
+    justify-content: space-between;
     align-items: end;
-    border-radius: 0px 0px 10px 10px;
+    background-color: rgb(204, 202, 202);
+    padding: 5%;
+    border-radius: 10px;
+    border: 1px solid rgba(81, 107, 131, 0.493);
+    box-shadow: 0px 0px 5px 2px rgba(81, 107, 131, 0.493);
+}
+
+@keyframes menu {
+    0% {
+        top: 15px;
+        background-color: rgba(187, 183, 183, 0);
+    }
+
+    50% {
+        top: 50px;
+        background-color: rgba(187, 183, 183, 0.493);
+    }
+
+    100% {
+        top: 22px;
+        background-color: rgb(187, 183, 183);
+    }
+}
+
+@keyframes fall {
+    0% {
+        top: 22px;
+        background-color: beige;
+        border: 1px solid beige;
+    }
+
+    100% {
+        top: -20px;
+        border: 1px solid beige;
+        background-color: beige;
+    }
 }
 
 .insert,
@@ -167,12 +202,10 @@ a {
 .settings {
     width: 30px;
     height: 30px;
-    margin: 2%;
     border-radius: 10px;
-    border: 1px solid aliceblue;
-    box-shadow: 0px 0px 2px 2px rgb(177, 181, 184);
     color: rgba(165, 42, 42, 0.61);
     transition: scale .2s linear;
+    margin: 3px;
 }
 
 /* @media (min-width:) and (max-width:) {} */
@@ -244,7 +277,7 @@ a {
     }
 
     50% {
-        transform: rotate(360deg);
+        transform: rotate(45deg);
     }
 }
 
@@ -255,7 +288,7 @@ a {
 .settings:hover {
     cursor: pointer;
     scale: 1.5;
-    animation: rotate 0.3s ease-in-out;
+    animation: rotate 0.5s ease-in-out;
 }
 
 /*                                        WORKSPACE                                         */

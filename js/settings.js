@@ -1,5 +1,4 @@
 let title = document.querySelector(".title");
-let buttons = document.querySelector(".buttons");
 let setting = document.querySelector(".settings");
 //--------------------------------------------------------------------------
 //-----------------------prices---------------------------------------------
@@ -16,7 +15,7 @@ document.addEventListener("click", (event) => {
 
         taskList.style.setProperty("filter", "none");
 
-        buttons.style.setProperty("filter", "none");
+        buttoms.style.setProperty("filter", "none");
 
         mySettings.style.setProperty("display", "none");
     }
@@ -29,7 +28,7 @@ document.addEventListener("click", (event) => {
 
             taskList.style.setProperty("filter", "blur(5px)");
 
-            buttons.style.setProperty("filter", "blur(5px)");
+            buttoms.style.setProperty("filter", "blur(5px)");
         }
 
 })

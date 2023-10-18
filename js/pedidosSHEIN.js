@@ -1,5 +1,8 @@
 //-------------------------------------------------
 //---------------BUTTONS---------------------------
+let buttoms = document.querySelector(".buttoms")
+let optionBtnImg = document.querySelector(".option-btn img");
+let optionBtn = document.querySelector(".option-btn");
 let insert = document.querySelector(".insert");
 let update = document.querySelector(".update");
 let Delete = document.querySelector(".delete");
@@ -15,7 +18,7 @@ let containerTask = document.querySelector(".container-task");
 //...............................
 //.......GLOBAL VARIABLES........
 let operation = "";
-
+let option = false;
 //deletion
 let task = []
 
@@ -153,14 +156,51 @@ document.addEventListener("click", (event) => {
         makeBluur();
     }
     else if (event.target == insert) {
+
         insertHandler();
-        containerTask.style.setProperty("filter", "none");
+
     }
     else if (event.target == update) {
+
         updateHandler();
-        containerTask.style.setProperty("filter", "none");
-    } else if (true) {
-        containerTask.style.setProperty("filter", "none");
+
+
+    } else if (event.target == Delete || event.target == setting || event.target == completed) {
+
+
+    }
+    else {
+
+        if (event.target == optionBtn || event.target == optionBtnImg) {
+            if (option == true) {
+                buttoms.style.setProperty("animation", "fall .4s linear");
+                buttoms.style.setProperty("top", "-10px");
+
+                setTimeout(() => {
+                    buttoms.style.setProperty("display", "none");
+                }, 300);
+
+                option = false;
+            }
+            else {
+                buttoms.style.setProperty("display", "flex");
+                buttoms.style.setProperty("top", "22px");
+                buttoms.style.setProperty("animation", "menu .35s linear");
+                option = true;
+            }
+        }
+        else if (option == true) {
+
+            buttoms.style.setProperty("animation", "fall .4s linear");
+            buttoms.style.setProperty("top", "-20px");
+
+            setTimeout(() => {
+                buttoms.style.setProperty("display", "none");
+            }, 300);
+
+            option = false;
+
+        }
     }
 })
 //..............................................................
