@@ -8,6 +8,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .super-container {
     width: 100%;
     height: 90%;
@@ -16,7 +20,7 @@ body {
     padding-top: 5px;
 }
 
-/*------------------------------------------------------------------*/
+/*----------------------------HEAD-----------------------------------*/
 .head {
     display: flex;
     justify-content: space-around;
@@ -35,14 +39,54 @@ body {
 }
 
 .more {
-    width: 25px;
-    height: 25px;
-    position: relative;
-    left: 10px;
-    transition: scale .2s linear, rotation .2s linear;
+    display: flex;
+    position: fixed;
+    top: 90%;
+    left: 80%;
 }
 
-.more:hover,
+.options {
+    width: 50px;
+    height: 50px;
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    box-shadow: 0px 0px 2px 3px brown;
+    transition: box-shadow .2s linear, border .2s linear, background-color .2s linear;
+}
+
+.options:hover {
+    box-shadow: 0px 0px 8px 5px rgb(172, 74, 74);
+    background-color: rgb(182, 63, 63);
+    cursor: pointer;
+}
+
+.plus,
+.trash {
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.plus {
+    top: -55px;
+    left: 15px
+}
+
+.trash {
+    left: -70px;
+}
+
+.plus:hover,
+.trash:hover {
+    cursor: pointer;
+    scale: 1.2;
+    transition: scale .2s linear;
+}
+
+.more-img:hover,
 .night-mode:hover {
     cursor: pointer;
     scale: 1.2;
@@ -61,6 +105,7 @@ body {
 }
 
 /*------------------------------------------------------------------*/
+/*----------------------------INPUTS--------------------------------*/
 .date-name {
     display: flex;
     justify-content: flex-start;
@@ -134,4 +179,76 @@ input:focus {
     outline: none;
 }
 
+/*-------------------------------------------------------------------*/
 /*------------------------TABLE--------------------------------------*/
+
+.main-table {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: white;
+    background-color: rgb(192, 192, 192);
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.delivery {
+    border: 2px solid white;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.properties {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.size,
+.shein-price,
+.cost,
+.my-price {
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width:300px) and (max-width:400px) {
+
+    .size h2,
+    .shein-price h2,
+    .cost h2,
+    .my-price h2,
+    .delivery h2 {
+        font-size: 9px;
+    }
+
+}
+
+@media (min-width:400px) and (max-width:500px) {
+
+    .size h2,
+    .shein-price h2,
+    .cost h2,
+    .my-price h2,
+    .delivery h2 {
+        font-size: 14px;
+    }
+
+}
+
+/*-------------------------------------------------------------------*/
+/*------------------------DATA--------------------------------------*/
+
+.data {
+    width: 100%;
+    height: 70%;
+    background-color: aquamarine;
+}
+
+
+/*-------------------------------------------------------------------*/

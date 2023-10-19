@@ -17,9 +17,10 @@ function setWidthOfNameh4_dateh4() {
 // Set the cursor position of the "#test-input" element to the end when the page loads
 setWidthOfNameh4_dateh4();
 
-
 window.addEventListener("resize", function () {
 
     setWidthOfNameh4_dateh4();
-    console.log("Page size changed");
+
 });
+
+

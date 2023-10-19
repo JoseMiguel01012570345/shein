@@ -107,8 +107,12 @@ function updateValue() {
 
             document.querySelector(`.hfrom${num}`).innerHTML = value;
         }
-        else
-            alert("Write a number");
+        else {
+            if (value != "" && value != null) {
+                console.log(value);
+                alert("Write a number");
+            }
+        }
     }))
 
     to.forEach(element => element.addEventListener("click", event => {
@@ -123,7 +127,10 @@ function updateValue() {
         }
 
         else
-            alert("Write a number");
+            if (value != "" && value != null) {
+                console.log(value);
+                alert("Write a number");
+            }
     }))
 
     sum.forEach(element => element.addEventListener("click", event => {
@@ -137,8 +144,12 @@ function updateValue() {
             document.querySelector(`.hsum${num}`).innerHTML = value;
         }
 
-        else
-            alert("Write a number");
+        else {
+            if (value != "" && value != null) {
+                console.log(value);
+                alert("Write a number");
+            }
+        }
     }))
 
 
